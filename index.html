@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+
+	<style type="text/css">
+		#menu {
+			background-color: #dff3fb;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(document).on('mobileinit', function() {
+			$.mobile.defaultPageTransition = 'slidefade';
+		});
+	</script>
+</head>
+<body>
+
+
+
+	<!-- Start of first page -->
+	<div data-role="page" id="menu">
+
+		<div data-role="header">
+			<h1>Natural Rich Global</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<h3>Natural Rich Global Limited</h3>
+			<p>This is the Natural Rich Global Matrix Calculator. It can be used for calculating the powers of matrix, conversions from NGN to USD and numbers of accounts that can be opened with certain amount. This will also give you an accurate number of accounts you will need to get to certain stage in the matrix.</p>
+			<a href="#calculator" style="color:black; background-color:lime;" class="ui-btn" data-transition="slide">Calculator</a></p>
+			<a href="#converter" style="color:black; background-color:lime;" class="ui-btn" data-transition="slide">Converter</a></p>
+			<a href="#matrix" style="color:black; background-color:lime;" class="ui-btn" data-transition="slide">Matrix Calculator</a></p>
+			<a href="#howtouse" style="color:black; background-color:lime;" class="ui-btn" data-transition="slide">How to Use</a></p>
+		</div><!-- /content -->
+
+		<!-- <div data-role="footer" style="background-color:black; color:white;" data-position = "fixed">
+			<h4>Page Footer</h4>
+		</div> --><!-- /footer -->
+	</div><!-- /page -->
+
+
+
+
+	<!-- Start of second page -->
+	<div data-role="page" id="calculator">
+		<div data-role="panel" id="mypanelcalculator">
+			<a href="#calculator" class="ui-btn">Calculator</a>
+			<a href="#converter" class="ui-btn">Converter</a>
+			<a href="#matrix" class="ui-btn">Matrix Calculator</a>
+			<a href="#howtouse" class="ui-btn">How to Use</a>
+    <!-- panel content goes here -->
+    		<a href="#my-header" data-rel="close" class="ui-btn">Close panel</a>
+		</div><!-- /panel -->
+		<div data-role="header">
+			<a href="#menu"><</a>
+			<h1>Calculator</h1>
+			<a href="#mypanelcalculator">sub menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+						<h3>
+							Calculator
+						</h3>
+						<div class="input-container">
+							<label for="num1"><b>
+								First Number:</b>
+							</label>
+							<input style="background-color:#dff3fb" id="num1" class="input" type="number" name="number1" placeholder="enter first number">
+						</div>
+						<div class="input-container">
+							<label for="operator"><b>
+								Operators:</b>
+								<small>
+									+ , - , * , / , power , total power
+								</small>
+							</label>
+
+							<select id="sign" style="background-color:#f3f3f3" class="input">
+
+								<option id="sign-option">
+									select operator
+								</option>
+
+								<option value="+">
+									+
+								</option>
+
+								<option value="-">
+									-
+								</option>
+
+								<option value="*">
+									*
+								</option>
+
+								<option value="/">
+									/
+								</option>
+
+								<option value="modulus">
+									modulus
+								</option>
+
+								<option value="power">
+									power
+								</option>
+
+								<option value="tot-pow">
+									total power
+								</option>
+
+							</select>
+						</div>
+						<div class="input-container">
+							<label for="num2"><b>
+								Second Number: <small>power-index,</small></b>
+							</label>
+
+							<input style="background-color:#dff3fb" id="num2" class="input" type="number" name="num2" placeholder="enter second number">
+						</div>
+						<div class="input-container">
+							<label for="result"><b>
+								Result:</b>
+							</label>
+
+							<input style="background-color:#dff3fb" id="result-bas" class="input" type="text" name="result" placeholder="result">
+						</div>
+						<div class="submit-wrap d-flex justify-content-between">
+							<button id="submit-bas" style="background-color:lime; color:black;" class="input submit">answer</button>
+							<button id="reset-bas" style="background-color:lime; color:black;" class="input submit">reset</button>
+						</div>
+						<marquee><b>developer</b> Abdulsamad Adewale <b>call</b> +234 706 8022 402 <b>email</b> dewhalesoladimeji@gmail.com</marquee>
+		</div><!-- /content -->
+
+		<!-- <div data-role="footer" style="background-color:black; color:white;" data-position = "fixed">
+			<h4>Page Footer</h4>
+		</div> --><!-- /footer -->
+	</div><!-- /page -->
+
+
+
+
+
+	<div data-role="page" id="converter">
+		<div data-role="panel" id="mypanelconverter">
+			<a href="#calculator" class="ui-btn">Calculator</a>
+			<a href="#converter" class="ui-btn">Converter</a>
+			<a href="#matrix" class="ui-btn">Matrix Calculator</a>
+			<a href="#howtouse" class="ui-btn">How to Use</a>
+    <!-- panel content goes here -->
+    		<a href="#my-header" data-rel="close" class="ui-btn">Close panel</a>
+		</div><!-- /panel -->
+		<div data-role="header">
+			<a href="#menu"><</a>
+			<h1>Converter</h1>
+			<a href="#mypanelconverter">sub menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+
+						<h3>
+							Converter
+						</h3>
+						<div class="input-container">
+							<label for="quantity1"><b>
+								1st Quantity:</b>
+								<small>NGN</small>
+							</label>
+							<input style="background-color:#dff3fb" id="quantity1" class="input" type="number" name="quantity1" placeholder="quantity">
+						</div>
+						<div class="input-container">
+							<label for="quatities"><b>
+								Quatitties:</b>
+								<small>
+									USD-NGN;
+								</small>
+							</label>
+
+							<select id="quantities" style="background-color:#f3f3f3" class="input">
+								<option value="usd-ngn">
+									Naira - Dollar
+								</option>
+							</select>
+						</div>
+						<div class="input-container">
+							<label for="quantity2"><b>
+								2nd Quantity:</b>
+								<small>USD</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="quantity2" class="input" type="number" name="quantity2" placeholder="quantity">
+						</div>
+						<div class="input-container">
+							<label for="quantity2"><b>
+								Number of accounts:</b>
+							</label>
+
+							<input style="background-color:#dff3fb" id="no-acct" class="input" type="text" name="no-acct" placeholder="accounts">
+						</div>
+						<div class="submit-wrap d-flex justify-content-between">
+							<button id="submit-conv" style="background-color:lime; color:black;" class="input submit">answer</button>
+							<button id="reset-conv" style="background-color:lime; color:black;" class="input submit">reset</button>
+						</div>
+						<marquee><b>developer</b> Abdulsamad Adewale <b>call</b> +234 706 8022 402 <b>email</b> dewhalesoladimeji@gmail.com</marquee>
+		</div><!-- /content -->
+
+		<!-- <div data-role="footer" style="background-color:black; color:white;" data-position = "fixed">
+			<h4>Page Footer</h4>
+		</div> --><!-- /footer -->
+	</div><!-- /page -->
+
+
+
+
+
+	<div data-role="page" id="matrix">
+		<div data-role="panel" id="mypanelmatrix">
+			<a href="#calculator" class="ui-btn">Calculator</a>
+			<a href="#converter" class="ui-btn">Converter</a>
+			<a href="#matrix" class="ui-btn">Matrix Calculator</a>
+			<a href="#howtouse" class="ui-btn">How to Use</a>
+    <!-- panel content goes here -->
+    		<a href="#my-header" data-rel="close" class="ui-btn">Close panel</a>
+		</div><!-- /panel -->
+		<div data-role="header">
+			<a href="#menu"><</a>
+			<h1>Matrix Calculator</h1>
+			<a href="#mypanelmatrix">sub menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+						<h3>
+							NRG Matrix
+						</h3>
+						<div class="input-container">
+							<label for="reg-acct"><b>
+								Number of Registered Accounts</b>
+							</label>
+
+							<input style="background-color:#dff3fb" id="reg-acct" class="input" type="number" name="reg-acct" placeholder="registered">
+						</div>
+						<div class="input-container">
+							<label for="builder"><b>
+								Builder:</b>
+								<small>2x2</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="builder" class="input" type="text" name="builder" placeholder="builder">
+						</div>
+						<div class="input-container">
+							<label for="saphire"><b>
+								Saphire:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="saphire" class="input" type="text" name="saphire" placeholder="saphire">
+						</div>
+						<div class="input-container">
+							<label for="ruby"><b>
+								Ruby:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="ruby" class="input" type="text" name="ruby" placeholder="ruby">
+						</div>
+						<div class="input-container">
+							<label for="emerald"><b>
+								Emerald:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="emerald" class="input" type="text" name="emerald" placeholder="emerald">
+						</div>
+						<div class="input-container">
+							<label for="diamond"><b>
+								Diamond:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="diamond" class="input" type="text" name="diamond" placeholder="diamond">
+						</div>
+						<div class="input-container">
+							<label for="crown-diamond"><b>
+								Crown-diamond:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="crown-diamond" class="input" type="text" name="crown-diamond" placeholder="crown-diamond">
+						</div>
+						<div class="input-container">
+							<label for="ambassador"><b>
+								Ambassador:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="ambassador" class="input" type="text" name="ambassador" placeholder="ambassador">
+						</div>
+						<div class="input-container">
+							<label for="crown-ambassador"><b>
+								Crown-Ambassador:</b>
+								<small>2x3</small>
+							</label>
+
+							<input style="background-color:#dff3fb" id="crown-ambassador" class="input" type="text" name="crown-ambassador" placeholder="crown-ambassador">
+						</div>
+						<div class="submit-wrap d-flex justify-content-between">
+							<button id="submit-mat" style="background-color:lime; color:black;" class="input submit">answer</button>
+							<button id="reset-mat" style="background-color:lime; color:black;" class="input submit">reset</button>
+						</div>
+						<marquee><b>developer</b> Abdulsamad Adewale <b>call</b> +234 706 8022 402 <b>email</b> dewhalesoladimeji@gmail.com</marquee>
+		</div><!-- /content -->
+
+		<!-- <div data-role="footer" style="background-color:black; color:white;" data-position = "fixed">
+			<h4>Page Footer</h4>
+		</div> --><!-- /footer -->
+	</div><!-- /page -->
+
+
+
+
+
+	<div data-role="page" id="howtouse">
+		<div data-role="panel" id="mypanelhtu">
+			<a href="#calculator" class="ui-btn">Calculator</a>
+			<a href="#converter" class="ui-btn">Converter</a>
+			<a href="#matrix" class="ui-btn">Matrix Calculator</a>
+			<a href="#howtouse" class="ui-btn">How to Use</a>
+    <!-- panel content goes here -->
+    		<a href="#my-header" data-rel="close" class="ui-btn">Close panel</a>
+		</div><!-- /panel -->
+		<div data-role="header">
+			<a href="#menu"><</a>
+			<h1>How to Use</h1>
+			<a href="#mypanelhtu">sub menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<h3>How to Use</h3>
+			<dl>
+				<dt><b>Calculator</b></dt>
+				<dd>To use the calculator;</dd>
+				<ol>
+					<li>Enter a number in the first input area labelled "first number"</li>
+					<li>Select an operator from the dropdown list</li>
+					<li>Enter a number in the second input area labelled "second number"</li>
+					<li>Click the "answer" button for result</li>
+					<li>Click the "reset" button to clean the fields</li>
+				</ol>
+				<dt><b>Converter</b></dt>
+				<dd>To use the converter, (Note: It only converts currency to/from NGN and USD)</dd>
+				<ol>
+					<li>Enter a number in one of the input area labelled "1st quantity" or "2nd quantity"</li>
+					<li>Click the "answer" button for result</li>
+					<li>Click the "reset" button to clean the fields</li>
+				</ol>
+				<dt><b>Matrix Calculator</b></dt>
+				<dd>To use the matrix calculator,</dd>
+				<ol>
+					<li>Enter a number in one of the input area labelled "Number of Registered Accounts"</li>
+					<li>Click the "answer" button for result</li>
+					<li>Click the "reset" button to clean the fields</li>
+				</ol>
+			</dl>
+			<img width="70px" height="80px" src="adewale.jpg">
+			<marquee><b>developer</b> Abdulsamad Adewale <b>call</b> +234 706 8022 402 <b>email</b> dewhalesoladimeji@gmail.com</marquee>
+		</div><!-- /content -->
+
+		<!-- <div data-role="footer" style="background-color:black; color:white;" data-position = "fixed">
+			<h4>Page Footer</h4>
+		</div> --><!-- /footer -->
+	</div><!-- /page -->
+
+
+
+
+
+
+
+	<script type="text/javascript" src="js/nrgscript.js"></script>
+</body>
+</html>

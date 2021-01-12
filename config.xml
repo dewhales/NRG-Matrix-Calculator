@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    versionCode = "10"
+    version     = "0.0.2" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>N R G Matrix Calculator</name>
+
+  <description>
+      A calculator for Natural Rich Global Matrix.
+  </description>
+
+  <author href="https://build.phonegap.com" email="dewhalesoladimeji@gmail.com">
+      dewhale
+  </author>
+
+	<icon src="icon.png" />
+</widget>
